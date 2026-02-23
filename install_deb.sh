@@ -1,4 +1,4 @@
-#!/bin/bash
+ #!/bin/bash
 # Installation de Discord (avec fallback curl)
 
 echo "🎤 Installation de Discord"
@@ -26,4 +26,6 @@ sudo dpkg -i /tmp/discord.deb 2>/dev/null || sudo apt-get install -f -y
 rm -f /tmp/discord.deb
 
 echo "✅ Discord installé !"
-echo "🚀 Lance-le depuis le menu applications"
+echo "lancement"
+sleep 2 
+discord
