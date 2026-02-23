@@ -1,20 +1,19 @@
 #!/bin/bash
-# install-simple.sh - Version sans menu
+# Installation de Discord via .deb officiel
 
-echo "🎮 Installation de Discord et Steam"
-echo "=================================="
+echo "🎤 Installation de Discord"
+echo "=========================="
 
-sudo apt update && sudo apt upgrade -y
-
-# Discord
+# Téléchargement
+echo "⬇️ Téléchargement du .deb officiel..."
 wget -O /tmp/discord.deb "https://discord.com/api/download?platform=linux&format=deb"
-sudo dpkg -i /tmp/discord.deb
-sudo apt-get install -f -y
+
+# Installation
+echo "📦 Installation..."
+sudo dpkg -i /tmp/discord.deb || sudo apt-get install -f -y
+
+# Nettoyage
 rm /tmp/discord.deb
 
-# Steam
-sudo dpkg --add-architecture i386
-sudo apt update
-sudo apt install -y steam-installer
-
-echo "✅ Installation terminée !"
+echo "✅ Discord installé !"
+echo "🚀 Lance-le depuis le menu applications"
